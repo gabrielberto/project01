@@ -1,0 +1,41 @@
+.container-new-account {
+  height: 100%;
+  background: #F5F5FB;
+  width: 100%;
+  position: absolute;
+}
+
+/* login box */
+
+.jumbo-new-account {
+  margin: auto;
+  margin-top: 80px;
+  width: 515px;
+  height: 740px;
+  background: #FFFFFF;
+  border: 3px solid #F2F2F2;
+}
+
+.container-logo {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.title {
+  font-style: normal;
+  font-size: 22px;
+  line-height: 31px;
+  margin: 24px;
+}
+
+label {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: red;
+
+}
+
+input {
+
+}
