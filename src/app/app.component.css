@@ -25,17 +25,32 @@
   font-style: normal;
   font-size: 22px;
   line-height: 31px;
-  margin: 24px;
+  margin-top: 24px;
 }
 
-label {
-  font-style: normal;
+.sample-label {
+  font-style: inherit;
   font-size: 16px;
-  line-height: 26px;
-  color: red;
-
+  color: #696D8C;
+  font-weight: 500;
+  margin-top: 24px;
 }
 
-input {
+.sample-input {
+  height: 44px;
+  width: 375px;
+  border-radius: 0;
+}
+
+.form-container {
+  margin-left: 70px;
+}
+
+.validate-senha-bar {
+  display: inline-block;
+  width: 119.67px;
+  height: 8px;
+  background: #EAEAF4;
+  border-radius: 10px;
 
 }
