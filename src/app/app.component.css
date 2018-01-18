@@ -3,7 +3,12 @@
   background: #F5F5FB;
   width: 100%;
   position: absolute;
+  font-style: inherit;
+  font-size: 16px;
+  color: #696D8C;
+  font-weight: 500;
 }
+
 
 /* login box */
 
@@ -29,11 +34,8 @@
 }
 
 .sample-label {
-  font-style: inherit;
-  font-size: 16px;
-  color: #696D8C;
-  font-weight: 500;
   margin-top: 24px;
+  font-weight: 500;
 }
 
 .sample-input {
@@ -52,5 +54,24 @@
   height: 8px;
   background: #EAEAF4;
   border-radius: 10px;
-
+  margin-bottom: 0px;
+  margin-top: 8px;
 }
+
+.validate-senha-elipse {
+  width: 10px;
+  height: 10px;
+  background: #EAEAF4;
+  border-radius: 50%;
+  margin: 6px 8px 10px 0px;
+  float: left;
+}
+
+.red {
+  background-color: red;
+}
+
+.azul {
+  background-color: blue;
+}
+
