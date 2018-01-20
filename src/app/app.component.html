@@ -1,4 +1,4 @@
-<div class="container-new-account">
+
   <div class="jumbo-new-account">
     <div class="container-logo">
       <img src='../assets/img/logo.svg'>
@@ -7,49 +7,50 @@
 
     <div class="form-container">
 
-      <form class="form-group" name="new-acount">
-        <label for="name" class="sample-label">Nome completo</label>
-        <input id="name" class="form-control sample-input">
+      <form novalidate name="NewAccountForm">
+        <div class="form-group">
+          <label for="name" class="sample-label">Nome completo</label>
+          <input id="name" class="form-control sample-input">
 
-        <label for="name" class="sample-label">E-mail</label>
-        <input class="form-control sample-input">
+          <label for="email" class="sample-label">E-mail</label>
+          <input id="email" name="email" class="form-control sample-input" type="email">
 
-        <label for="name" class="sample-label">Senha</label>
-        <input class="form-control sample-input" [(ngModel)]="senha" (ngModelChange)="validatesenha($event)" [ngModelOptions]="{standalone: true}">
-        <p>senha:</p>
+          <label for="name" class="sample-label">Senha</label>
 
-        <div class="validate-senha-bar" [ngClass]="{red : (!!validate1 || !!validate2 || !!validate3)}"></div>
-        <div class="validate-senha-bar" [ngClass]="{red : ((!!validate1 && !!validate2) || (!!validate1 && !!validate3) || (!!validate2 && !!validate3))}" style="margin: 8px 4px 0px 4px;"></div>
-        <div class="validate-senha-bar" [ngClass]="{red : (!!validate1 && !!validate2 && !!validate3)}" ></div>
+          <input class="form-control sample-input" id="password" name="password" [ngClass]="{inputValidOne : (!!OneCondition), inputValidTwo : (!!TwoCondition), inputValidThree : (!!ThreeCondition)}"
+            [(ngModel)]="password" (ngModelChange)="validatesenha($event)">
 
 
-        <div style="margin-top: 8px">
-          <div style="display: flex;">
-            <span class="validate-senha-elipse" [ngClass]="{red : validate1}"></span>
-            <span>Pelo menos 6 caracteres</span>
+          <div class="validate-senha-bar" [ngClass]="{'class-validation-one' : (!!OneCondition), 'class-validation-two' : (!!TwoCondition), 'class-validation-three' : (!!ThreeCondition)}"></div>
+          <div class="validate-senha-bar" [ngClass]="{'class-validation-two' : (!!TwoCondition), 'class-validation-three' : (!!ThreeCondition)}"
+            style="margin: 8px 4px 0px 4px;"></div>
+          <div class="validate-senha-bar" [ngClass]="{'class-validation-three' : (!!ThreeCondition)}"></div>
+
+          <div style="margin-top: 8px">
+            <div style="display: flex;">
+              <span class="validate-senha-elipse" [ngClass]="{'class-validation-one' : touched, 'class-validation-three' : validateLength}"></span>
+              <span>Pelo menos 6 caracteres</span>
+            </div>
+
+            <div style="display: flex;">
+              <span class="validate-senha-elipse" [ngClass]="{'class-validation-one' : touched, 'class-validation-three' : validateUppercase}"></span>
+              <span>Pelo menos 1 letra maiúscula</span>
+            </div>
+
+            <div style="display: flex;">
+              <span class="validate-senha-elipse" [ngClass]="{'class-validation-one' : touched, 'class-validation-three' : validateNumber}"></span>
+              <span>Pelo menos um número</span>
+            </div>
+
           </div>
 
-          <div style="display: flex;">
-            <span class="validate-senha-elipse" [ngClass]="{red : validate2}"></span>
-            <span>Pelo menos 1 letra maiúscula</span>
-          </div>
+          <label for="name" class="sample-label">Confirme sua senha</label>
+          <input class="form-control sample-input">
 
-          <div style="display: flex;">
-            <span class="validate-senha-elipse" [ngClass]="{red : validate3}"></span>
-            <span>Pelo menos um número</span>
-          </div>
-
+          <button class="btn btn-new-account">Criar conta</button>
         </div>
-
-        <label for="name" class="sample-label">Confirme sua senha</label>
-        <input class="form-control sample-input">
-
-
-
-
       </form>
 
     </div>
 
   </div>
-</div>

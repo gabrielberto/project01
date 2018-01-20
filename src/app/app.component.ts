@@ -7,41 +7,65 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
 
-  validate1 = false;
-  validate2 = false;
-  validate3 = false;
-  barValidate = 0;
+  validateLength = false;
+  validateUppercase = false;
+  validateNumber = false;
+  OneCondition = false;
+  TwoCondition = false;
+  ThreeCondition = false;
 
-  constructor() { }
+  touched = false;
+
+
+  constructor() {}
 
   validatesenha(senha: any) {
     if (senha.length >= 6) {
-      this.validate1 = true;
+      this.validateLength = true;
     } else {
 
-      this.validate1 = false;
+      this.validateLength = false;
     }
 
     var letras_maiusculas = "ABCDEFGHYJKLMNOPQRSTUVWXYZ";
-
     if (senha.match(/[A-Z]/)) {
-      this.validate2 = true;
+      this.validateUppercase = true;
     } else {
-      this.validate2 = false;
+      this.validateUppercase = false;
     }
-
 
     var numeros = '0123456789'
-
     if (senha.match(/[0-9]/)) {
-      this.validate3 = true;
+      this.validateNumber = true;
     } else {
-      this.validate3 = false;
+      this.validateNumber = false;
     }
 
-    console.log(senha);
+    this.validateClass();
+    this.touched = true;
+  }
+
+  validateClass() {
+    if (this.validateLength || this.validateUppercase || this.validateNumber) {
+      this.OneCondition = true;
+    } else {
+      this.OneCondition = false;
+    }
+
+    if ((this.validateLength && this.validateUppercase) ||
+      (this.validateLength && this.validateNumber) ||
+      (this.validateUppercase && this.validateNumber)) {
+      this.TwoCondition = true;
+    } else {
+      this.TwoCondition = false;
+    }
+
+    if (this.validateLength && this.validateUppercase && this.validateNumber) {
+      this.ThreeCondition = true;
+    } else {
+      this.ThreeCondition = false;
+    }
   }
 
 }

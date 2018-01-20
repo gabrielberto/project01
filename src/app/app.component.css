@@ -1,22 +1,7 @@
-.container-new-account {
-  height: 100%;
-  background: #F5F5FB;
-  width: 100%;
-  position: absolute;
-  font-style: inherit;
-  font-size: 16px;
-  color: #696D8C;
-  font-weight: 500;
-}
-
-
-/* login box */
-
 .jumbo-new-account {
   margin: auto;
   margin-top: 80px;
   width: 515px;
-  height: 740px;
   background: #FFFFFF;
   border: 3px solid #F2F2F2;
 }
@@ -31,6 +16,7 @@
   font-size: 22px;
   line-height: 31px;
   margin-top: 24px;
+  color: #312F4F;
 }
 
 .sample-label {
@@ -67,11 +53,44 @@
   float: left;
 }
 
-.red {
-  background-color: red;
+.class-validation-one {
+  background-color: #F79682;
 }
 
-.azul {
-  background-color: blue;
+.class-validation-two {
+  background-color: #F7BC1C;
 }
 
+.class-validation-three {
+  background-color: #1FE6A8;
+}
+
+.input-valid-one {
+  border: 1px solid #F79682;
+  box-sizing: border-box;
+  box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.05);
+}
+
+.input-valid-two {
+  border: 1px solid #F7BC1C;
+  box-sizing: border-box;
+  box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.05);
+}
+
+.input-valid-three {
+  border: 1px solid #1FE6A8;
+  box-sizing: border-box;
+  box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn-new-account {
+  border-radius: 0px;
+  height: 52px;
+  width: 376px;
+  background-color: #17D499;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
